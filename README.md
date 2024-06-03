@@ -1,52 +1,51 @@
-# Desafio Classificador de Nível de Herói
+# Projetos
 
-Este repositório contém a solução para o desafio "Classificador de Nível de Herói" proposto pela DIO. O objetivo é criar um script em Python que classifica o nível de um herói com base em sua experiência (XP).
+## Projeto 1
 
-## Objetivo do Desafio
+### Descrição
+Este projeto calcula o saldo de vitórias e a média de vitórias de um herói em um jogo. Com base na média de vitórias, determina-se o nível do herói.
 
-O objetivo é armazenar o nome e a quantidade de experiência (XP) de um herói em variáveis e, utilizando uma estrutura de decisão, determinar e exibir o nível do herói conforme a quantidade de XP.
+### Código
+```python
+vitorias = 10
+derrotas = 3
 
-### Classificação dos Níveis
+saldo = vitorias - derrotas
 
-- XP < 1000: Ferro
-- 1001 <= XP <= 2000: Bronze
-- 2001 <= XP <= 5000: Prata
-- 5001 <= XP <= 7000: Ouro
-- 7001 <= XP <= 8000: Platina
-- 8001 <= XP <= 9000: Ascendente
-- 9001 <= XP <= 10000: Imortal
-- XP >= 10001: Radiante
+media = ((vitorias) / (vitorias + derrotas)) * 100
 
-## Estrutura do Projeto
+match media:
+    case media if media <= 10:
+        nivel = "Ferro"
+    case media if media >= 11 and media <= 20:
+        nivel = "Bronze"
+    case media if media >= 21 and media <= 50:
+        nivel = "Prata"
+    case media if media >= 51 and media <= 80:
+        nivel = "Ouro"
+    case media if media >= 81 and media <= 90:
+        nivel = "Diamante"
+    case media if media >= 91 and media <= 100:
+        nivel = "Lendário"
+    case media if media >= 101:
+        nivel = "Imortal"
 
-Este projeto utiliza conceitos fundamentais de programação, incluindo:
-- Variáveis
-- Operadores
-- Laços de repetição
-- Estruturas de decisão
+media_ = round(media, 2)
 
-## Instruções de Uso
+print(
+    f"O herói tem saldo de {saldo} vitórias e está no nível: {nivel}. \nMédia de {media_}% vitórias"
+)
+```
 
-1. Clone o repositório para sua máquina local.
-    ```bash
-    git clone https://github.com/seu-usuario/seu-repositorio.git
-    ```
-2. Navegue até o diretório do projeto.
-    ```bash
-    cd seu-repositorio
-    ```
-3. Execute o script Python.
-    ```bash
-    python classificacao_heroi.py
-    ```
-4. Siga as instruções no terminal para digitar o nome e a experiência (XP) do herói.
+## Projeto 2
 
-## Código
+### Descrição
+Este projeto classifica um herói com base em sua experiência (xp) em um jogo. Determina-se o nível do herói com base no valor de xp fornecido.
 
-O código abaixo realiza a classificação do herói com base na experiência fornecida:
-
+### Código
 ```python
 def classificiarHeroi():
+
     if xp < 1000:
         nivel = "Ferro"
     elif xp >= 1001 and xp <= 2000:
@@ -68,15 +67,12 @@ def classificiarHeroi():
 
     print(f"O Herói de nome {nome} está no nível: {nivel}")
 
+
 nome = input("Digite o nome do herói: ")
 xp = int(input("Digite a experiência do herói: "))
 
 classificiarHeroi()
 ```
 
-
-
-## Autores
-
-- [@eduardopetrocchi](https://github.com/eduardopetrocchi)
-
+### Como Executar
+Para executar cada projeto, basta copiar e colar o código em um editor de texto ou em uma IDE Python e executar o programa.
