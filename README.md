@@ -75,4 +75,36 @@ classificiarHeroi()
 ```
 
 ### Como Executar
-Para executar cada projeto, basta copiar e colar o código em um editor de texto ou em uma IDE Python e executar o programa.
+Para executar cada projeto, basta copiar e colar o código em um editor de texto ou em uma IDE Python e executar o programa. 
+
+
+## Projeto 3
+
+# Jogo de Aventura - Heróis
+
+Este projeto implementa uma classe genérica que representa um herói em uma aventura. Cada herói possui propriedades como nome, idade e tipo. Além disso, a classe inclui um método chamado `atacar` que exibe uma mensagem de ataque com base no tipo do herói.
+
+## Estrutura do Projeto
+
+## Funcionalidades
+
+### Classe Heroi
+
+A classe `Heroi` possui as seguintes propriedades:
+
+- `nome`: O nome do herói.
+- `idade`: A idade do herói.
+- `tipo`: O tipo do herói (ex: guerreiro, mago, monge, ninja).
+
+### Método atacar
+
+O método `atacar` exibe a mensagem: "O {tipo} {nome} atacou usando {ataque}", onde:
+
+- `{tipo}` é o tipo do herói.
+- `{nome}` é o nome do herói.
+- `{ataque}` depende do tipo do herói:
+  - mago -> usou magia
+  - guerreiro -> usou espada
+  - monge -> usou artes marciais
+  - ninja -> usou shuriken
+Se o tipo for inválido, o método exibe a mensagem "Insira um tipo válido".
