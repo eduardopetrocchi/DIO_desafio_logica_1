@@ -4,26 +4,31 @@ class Heroi:
         self.idade = idade
         self.tipo = tipo
 
+    def atacar(self):
+        ataque = ""
+        if self.tipo == "mago":
+            ataque = "magia"
+        elif self.tipo == "guerreiro":
+            ataque = "espada"
+        elif self.tipo == "monge":
+            ataque = "artes marciais"
+        elif self.tipo == "ninja":
+            ataque = "shuriken"
+        else:
+            print("Insira um tipo válido")
+            return
 
-def atacar(tipo, ataque=""):
-
-    if tipo == "mago":
-        ataque = "magia"
-    elif tipo == "guerreiro":
-        ataque = "espada"
-    elif tipo == "monge":
-        ataque = "artes marciais"
-    elif tipo == "ninja":
-        ataque = "shuriken"
-    else:
-        print("Insira um tipo válido")
-        return
-
-    print(f"o {tipo} atacou usando {ataque}")
+        print(f"O {self.tipo}{self.nome} atacou usando {ataque}")
 
 
-atacar("mago")
-atacar("guerreiro")
-atacar("monge")
-atacar("ninja")
-atacar("nin")
+heroi1 = Heroi("Merlin", 150, "mago")
+heroi2 = Heroi("Arthur", 35, "guerreiro")
+heroi3 = Heroi("Shaolin", 40, "monge")
+heroi4 = Heroi("Hanzo", 25, "ninja")
+heroi5 = Heroi("Desconhecido", 30, "nin")
+
+heroi1.atacar()
+heroi2.atacar()
+heroi3.atacar()
+heroi4.atacar()
+heroi5.atacar()
